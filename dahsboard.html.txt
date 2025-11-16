@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriTrack - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>NutriTrack Dashboard</h1>
+    <nav><a href="index.html">Calculator</a></nav>
+  </header>
+
+  <main>
+    <h2>Welcome Back!</h2>
+    <div id="userInfo"></div>
+    <button onclick="logout()">Logout</button>
+  </main>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      document.getElementById("userInfo").innerHTML = `
+        <p>Email: ${user.email}</p>
+        <p>Your saved preferences will appear here.</p>
+      `;
+    } else {
+      window.location.href = "login.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
