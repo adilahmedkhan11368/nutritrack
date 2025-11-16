@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us - NutriTrack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.7; }
+h1 { color: #2b8a3e; }
+label { display: block; margin-top: 12px; }
+input, textarea { width: 100%; padding: 10px; margin-top: 6px; border: 1px solid #ccc; border-radius: 5px; }
+button { margin-top: 15px; padding: 10px 20px; background: #2b8a3e; color: white; border: none; border-radius: 5px; cursor: pointer; }
+button:hover { background: #237032; }
+</style>
+</head>
+<body>
+
+<h1>Contact Us</h1>
+
+<p>Have questions or suggestions? We’d love to hear from you.</p>
+
+<p><strong>Email:</strong> [your email here]</p>
+
+<form action="https://formspree.io/f/yourformid" method="POST">
+  <label>Name</label>
+  <input type="text" name="name" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <label>Message</label>
+  <textarea name="message" rows="5" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+</body>
+</html>
