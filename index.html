@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriTrack - Calorie Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>NutriTrack</h1>
+    <nav><a href="login.html">Login</a></nav>
+  </header>
+
+  <main>
+    <h2>Calorie Calculator</h2>
+    <form id="calorieForm">
+      <label>Unit:
+        <select id="unit">
+          <option value="metric">Metric (kg/cm)</option>
+          <option value="imperial">Imperial (lbs/in)</option>
+        </select>
+      </label>
+      <input type="number" id="age" placeholder="Age" required />
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <input type="number" id="weight" placeholder="Weight" required />
+      <input type="number" id="height" placeholder="Height" required />
+      <select id="activity">
+        <option value="1.2">Sedentary</option>
+        <option value="1.375">Lightly active</option>
+        <option value="1.55">Moderately active</option>
+        <option value="1.725">Very active</option>
+      </select>
+      <select id="goal">
+        <option value="loss">Weight Loss</option>
+        <option value="maintain">Maintain</option>
+        <option value="gain">Muscle Gain</option>
+      </select>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results"></div>
+
+    <div id="dietSection" style="display:none;">
+      <h3>Select Dietary Style</h3>
+      <select id="dietStyle">
+        <option value="balanced">Balanced</option>
+        <option value="keto">Keto</option>
+        <option value="vegan">Vegan</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="mediterranean">Mediterranean</option>
+        <option value="high-protein">High-Protein</option>
+        <option value="low-carb">Low-Carb</option>
+      </select>
+      <button onclick="generateDietPlan()">Generate Diet Plan</button>
+      <div id="dietPlan"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

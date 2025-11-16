@@ -1,0 +1,6 @@
+nutritrack/
+├── index.html         # Home + Calculator
+├── login.html         # Login/Signup page
+├── dashboard.html     # Personalized dashboard
+├── style.css          # Styling
+└── script.js          # All logic (auth, calculator, diet plans)
